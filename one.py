@@ -45,7 +45,7 @@ class Optimizer_Interface(torch.optim.Optimizer):
                 'self', 'parameters'
             ]
         }
-        super(Optimizer_Interface, self).__init__(parameters, default_params)
+        super(Optimizer_Interface, self).__init__(parameters, self.default_params)
         
     
     def __repr__(self) -> str(dict[str, Any]):
