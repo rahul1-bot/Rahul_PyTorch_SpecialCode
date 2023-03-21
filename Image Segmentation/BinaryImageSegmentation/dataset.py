@@ -71,7 +71,7 @@ class BinarySegmentationDataset(torch.utils.data.Dataset):
         ]
 
         mask_paths: list[str] = [
-            os.path.join(image_directory, filename) for filename in mask_filenames
+            os.path.join(mask_directory, filename) for filename in mask_filenames
         ]
         
         data_dict: dict[str, list[str]] = {
