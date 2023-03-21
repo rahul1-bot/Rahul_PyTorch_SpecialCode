@@ -61,14 +61,14 @@ class ImageRecognitionDataset(torch.utils.data.Dataset):
         
         images_paths: list[str] = [
             os.path.join(data_directory, class_name, image_name)                                        # main list item
-            for class_name in class_names                                                               # 2nd loop 
-            for image_name in os.listdir(os.path.join(data_directory, class_name))                      # 1st loop
+            for class_name in class_names                                                               # 1st loop 
+            for image_name in os.listdir(os.path.join(data_directory, class_name))                      # 2nd loop
         ]
              
         labels: list[str] = [
             index                                                                                       # main list item
-            for index, class_name in enumerate(class_names)                                             # 2nd loop                                                                        
-            for _ in os.listdir(os.path.join(data_directory, class_name))                               # 1st loop
+            for index, class_name in enumerate(class_names)                                             # 1st loop                                                                        
+            for _ in os.listdir(os.path.join(data_directory, class_name))                               # 2nd loop
         ]
         
         
