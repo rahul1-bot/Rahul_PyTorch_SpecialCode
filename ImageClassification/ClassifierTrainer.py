@@ -237,7 +237,7 @@ if __name__.__contains__('__main__'):
     dataset = ...
     model: torch.nn.Module = ...
     trainer = Trainer(model= model, dataset= dataset, batch_size= 64, learning_rate= 0.001, num_epochs= 10)
-    history = trainer.train()
+    history = trainer.train_loop()
 
     # Save the model and plot the metrics
     trainer.save_model('model_weights.pth')
