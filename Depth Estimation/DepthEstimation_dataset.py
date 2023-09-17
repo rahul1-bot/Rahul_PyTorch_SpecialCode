@@ -193,10 +193,35 @@ class DepthEstimationDataset(torch.utils.data.Dataset):
             'dependent_variable': depth
         }
         
-        
-        
+    #########################################################
+    # import os
+    # import pandas as pd
+    # from concurrent.futures import ThreadPoolExecutor
     
+    # @staticmethod
+    # def get_file_paths(directory: str) -> list[str]:
+    #     paths = []
+    #     for file_name in os.listdir(directory):
+    #         full_path = os.path.join(directory, file_name)
+    #         if os.path.isfile(full_path):
+    #             paths.append(full_path)
+    #     return paths
+
+
+    # @staticmethod
+    # def prepare_dataset(image_directory: str, depth_directory: str) -> pd.DataFrame:
+    #     # 12 threads 
+    #     with ThreadPoolExecutor(max_workers=12) as executor:
+    #         image_paths, depth_paths = executor.map(get_file_paths, [image_directory, depth_directory])
+        
+    #      data_dict = {
+    #         'image_path': image_paths,
+    #         'depth_path': depth_paths
+    #     }
+
+    #     return pd.DataFrame(data_dict)
     
+    #########################################################
     
     def visualize_sample(self, index: int) -> None:
         
